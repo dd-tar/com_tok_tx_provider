@@ -1,0 +1,94 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @framer-motion
+
+PATH: 
+  C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\fasmw17325\INCLUDE\WIN32A.INC;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Java\jdk1.8.0_281\bin;%M2_HOME%\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Java\jdk1.8.0_281;C:\Users\ddtar\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.3\plugins\maven\lib\maven3\bin;C:\Users\ddtar\AppData\Roaming\npm;;C:\Program Files\JetBrains\GoLand 2021.3.2\bin;;C:\Users\ddtar\AppData\Local\Yarn\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;;C:\Program Files\heroku\bin;C:\Users\ddtar\go\bin;C:\Program Files\JetBrains\WebStorm 2022.2.1\bin;;C:\Users\ddtar\Documents\education\hse_pe\курсач3\code\0_my\approve\node_modules\.bin;;C:\Users\ddtar\Apps\go-ipfs_v0.12.2\go-ipfs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.13.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@framer-motion: Request "https://registry.yarnpkg.com/@framer-motion" returned a 405
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66154:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "approve",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@chakra-ui/react": "^2.3.2",
+      "@emotion/react": "^11.10.4",
+      "@emotion/styled": "^11.10.4",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.3.0",
+      "@testing-library/user-event": "^13.5.0",
+      "@usedapp/core": "^1.1.5",
+      "assert": "^2.0.0",
+      "bootstrap": "^5.2.0",
+      "buffer": "^6.0.3",
+      "crypto-browserify": "^3.12.0",
+      "ethers": "^5.7.0",
+      "https-browserify": "^1.0.0",
+      "os-browserify": "^0.3.0",
+      "react": "^18.2.0",
+      "react-app-rewired": "^2.2.1",
+      "react-bootstrap": "^2.5.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.3.0",
+      "react-scripts": "5.0.1",
+      "stream-browserify": "^3.0.0",
+      "stream-http": "^3.2.0",
+      "url": "^0.11.0",
+      "web-vitals": "^2.1.4",
+      "web3": "^1.7.5"
+    },
+    "scripts": {
+      "start": "react-app-rewired start",
+      "build": "react-app-rewired build",
+      "test": "react-app-rewired test",
+      "eject": "react-app-rewired eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "process": "^0.11.10"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
