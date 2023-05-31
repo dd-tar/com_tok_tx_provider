@@ -1,4 +1,20 @@
-## Available Scripts
+# Transaction Provider Site for ComTokBot
+This repository contains the code of the site for transaction signing for ComTokBot (Telegram). It is a part of final qualifying paper on the topic
+"Tools for building tokenized communities".
+
+See also smart contracts of the system:  
+https://github.com/dd-tar/com_tok_contracts
+
+ComTokBot:  
+https://github.com/dd-tar/com_tok_bot
+
+## Main project files
+`src/abi` – directory containing smart contract interfaces. Used when calling smart contract methods.  
+`src/routes` - is a directory containing files with the site page code. Each page is responsible for calling and signing a transaction of one of the smart contract methods.  
+`src/ìndex.js` - a file that collects all site dependencies, as well as all pages from the routes directory into a single application. Also contains constants with addresses of contracts.  
+
+
+## Application launch
 
 In the project directory, you can run:
 
@@ -13,25 +29,8 @@ You may also see any lint errors in the console.
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles React in production mode and optimizes the build for the best performance.  
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-
-
-### Deployment
-
-You can read about it here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you have deployed your own smart [contract instances](https://github.com/dd-tar/com_tok_contracts), please remember to change the `communityFactoryAddress`, `backlogAddress`, `votingAddress` values in the `src/index.js` file before running the app.
+  
