@@ -24,9 +24,9 @@ import CreateTask from "./routes/create_task";
 import CreateVoting from "./routes/create_voting";
 import {Text} from "@chakra-ui/react";
 
-export const communityFactoryAddress = "0x8b90D81901A3F1566b064d491794b72eE5BEf0B2"; // Paste ComFactory address here
-export const backlogAddress = "0xD4f35033904e7359F5A2B3e0F2EDD96e2725Eb5E" // Paste Backlog address here
-export const votingAddress = "0xC4971afF4818aA02435033eE92568A040A4b6e8f" // Paste Voting address here
+export const communityFactoryAddress = "0x64fE4979598eA35EB8E725FAfeeA1DFA7c11Bea2"; // Paste ComFactory address here
+export const backlogAddress = "0x16bccDedDDb5a2c412Dc5e269B327Ef34EEfEcA0" // Paste Backlog address here
+export const votingAddress = "0xe7D5E1eeb5c1D76408978728d0D5bB0F80647Bd6" // Paste Voting address here
 export const baseURI = "http://127.0.0.1:5000"
 
 const rootElement = document.getElementById('root');
