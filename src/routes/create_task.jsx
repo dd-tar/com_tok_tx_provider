@@ -12,8 +12,6 @@ import { ethers} from "ethers";
 import Web3 from 'web3';
 import { backlogAddress } from "../index";
 import BacklogABI from '../abi/Backlog.json';
-import {wait} from "@testing-library/user-event/dist/utils";
-import {on} from "process";
 
 function CreateTask(effect, deps) {
     const params = useParams();
@@ -70,15 +68,12 @@ function CreateTask(effect, deps) {
                         "\nName: " + _name +
                         "\nDescription: " + _description +
                         "\nDeadline: " + new Date(_deadline * 1000).toLocaleString() +
-                        "\nReward: " + _reward +
+                        "\nReward: " + _reward/1e18 + " ETH" +
                         "\n\nThe bot will send you more info.");
                 });
 
-
-                var transaction = backlogContract.createTask(com_id, formValues['task_name'], formValues['task_description'], deadline, reward)
-                    /*.catch(async function (_error) {
-                        setError("The transaction failed.\n" + _error.toString())
-                    })*/
+                const weiReward = reward * 1e18
+                var transaction = backlogContract.createTask(com_id, formValues['task_name'], formValues['task_description'], deadline,  weiReward)
                     .catch(async function (_error) {
                         setResult("");
                         const data = _error.data;
@@ -88,7 +83,7 @@ function CreateTask(effect, deps) {
                             reason = Object.values(data)[0];
                         }catch {
                             reason = Object.values(_error)[0];
-                            setError("The transaction failed.\n" + _error.toString()) //_error.toString()
+                            setError("The transaction failed.\n" + _error.toString())
                         }
                         setError("The transaction failed.\nReason: " + reason)
                     });

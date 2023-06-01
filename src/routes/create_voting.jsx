@@ -1,10 +1,3 @@
-// todo accounts[0] - the las argument for createProposal(
-//         uint256 _comId,
-//         string memory _proposal,
-//         uint256 _numberOfOptions,
-//         uint256 _deadline, // in hours
-//         address creator // backlog should give task creator)
-
 import {
     Box,
     ChakraProvider,

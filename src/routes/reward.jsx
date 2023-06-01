@@ -13,7 +13,6 @@ import Web3 from 'web3';
 import {backlogAddress, votingAddress} from "../index";
 import BacklogABI from "../abi/Backlog.json";
 import VotingABI from "../abi/Voting.json";
-import {wait} from "@testing-library/user-event/dist/utils";
 
 export default function Reward() {
 
@@ -84,7 +83,7 @@ export default function Reward() {
                             nOfW()
                                 .then(function () {
                                     //console.log(accounts)
-                                    sum = parseInt(nOfWinners) * reward * 1e18;
+                                    sum = parseInt(nOfWinners) * reward;
                                     console.log("account3: ", accounts[0]);
                                     console.log("sum: ", sum);
                                     backlogContract.on("TaskClosed",(_token, _taskId) => {
@@ -96,8 +95,7 @@ export default function Reward() {
                                             "\nThe bot will send notification to the group.");
                                     });
                                     const intAmount = parseInt(reward);
-                                    const weiAmount = (reward * 1e18).toString();
-                                    const options = {value: ethers.utils.parseUnits(sum.toString(), "wei")} // ETH to wei
+                                    const options = {value: ethers.utils.parseUnits(sum.toString(), "wei")}
                                     // console.log("parseUnits: ", options.value.toString())
 
                                     let transaction = backlogContract.rewardSolversAndClose(comId, taskId, options)
